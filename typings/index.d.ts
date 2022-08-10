@@ -3,28 +3,28 @@ declare module "@36node/xlsx-toolkits" {
     title: String;
     key: String;
     dataIndex?: String;
-    children?: [ColumnItem];
+    children?: ColumnItem[];
     _width?: Number;
     _fill?: String;
   }
 
   interface WriteXlsxParams {
-    columns: [ColumnItem];
+    columns: ColumnItem[];
     distFile: String;
-    rows: [object];
+    rows: object[];
     type?: "xlsx" | "csv";
     sheetName?: String;
   }
 
   interface ReadXlsxParams {
-    columns: [ColumnItem];
+    columns: ColumnItem[];
     fileData: Buffer;
   }
 
   interface AppendXlsxParams {
-    columns: [ColumnItem];
+    columns: ColumnItem[];
     srcFileData: Buffer;
-    rows: [object];
+    rows: object[];
     type?: "xlsx" | "csv";
     sheetName?: String;
     distFile: String;
