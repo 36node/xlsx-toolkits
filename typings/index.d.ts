@@ -31,6 +31,6 @@ declare module "@36node/xlsx-toolkits" {
   }
 
   export function writeXlsx(params: WriteXlsxParams): void;
-  export function readXlsx(params: ReadXlsxParams): object[];
+  export function readXlsx<T = any>(params: ReadXlsxParams): T[];
   export function appendXlsx(params: AppendXlsxParams): void;
 }
